@@ -1,5 +1,20 @@
 // src/data/works.ts
 
+export type MediaItem = {
+  src: string;
+  alt?: string;
+  width?: number;
+  height?: number;
+};
+
+export type WorkExtra = {
+  publishedAt?: string;
+  gallery?: MediaItem[];
+  credits?: string;
+  duration?: string;
+  links?: { label: string; href: string }[];
+};
+
 export type Work = {
   id: string;
   title: string;
@@ -9,15 +24,12 @@ export type Work = {
   cover: string;
   href: string;
 
-  // 页面里可能用到的字段
   year?: string | number;
   role?: string;
   client?: string;
   tools?: string[];
 
-  extra?: {
-    publishedAt?: string;
-  };
+  extra?: WorkExtra;
 };
 
 export const works: Work[] = [
