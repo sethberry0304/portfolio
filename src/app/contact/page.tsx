@@ -15,7 +15,7 @@ export default function ContactPage() {
   return (
     <Section>
       <Container>
-        {/* Star Decorations */}
+        {/* Star Decorations - desktop */}
         <div className="hidden lg:block pointer-events-none z-0">
           <div className="absolute top-20 left-16 w-[384px] h-[384px]">
             <img src="/images/star1.png" alt="" className="w-full h-full" />
@@ -25,6 +25,15 @@ export default function ContactPage() {
           </div>
           <div className="absolute -bottom-24 left-1/3 w-[640px] h-[640px]">
             <img src="/images/star2.png" alt="" className="w-full h-full" />
+          </div>
+        </div>
+        {/* Star Decorations - mobile */}
+        <div className="lg:hidden pointer-events-none z-0">
+          <div className="absolute top-16 left-4 w-24 h-24">
+            <img src="/images/star1.png" alt="" className="w-full h-full" />
+          </div>
+          <div className="absolute bottom-24 right-4 w-28 h-28">
+            <img src="/images/star3.png" alt="" className="w-full h-full" />
           </div>
         </div>
         <div className="relative z-10 max-w-4xl mx-auto">

@@ -9,12 +9,21 @@ export default function VideosPage() {
   return (
     <Section>
       <Container>
-        {/* Star Decorations - sides only, behind content */}
+        {/* Star Decorations - desktop only */}
         <div className="hidden lg:block pointer-events-none z-0">
           <div className="absolute top-16 left-0 w-[320px] h-[320px]">
             <img src="/images/star1.png" alt="" className="w-full h-full" />
           </div>
           <div className="absolute bottom-24 right-0 w-[640px] h-[640px]">
+            <img src="/images/star2.png" alt="" className="w-full h-full" />
+          </div>
+        </div>
+        {/* Star Decorations - mobile */}
+        <div className="lg:hidden pointer-events-none z-0">
+          <div className="absolute top-14 left-2 w-24 h-24">
+            <img src="/images/star1.png" alt="" className="w-full h-full" />
+          </div>
+          <div className="absolute bottom-20 right-2 w-36 h-36">
             <img src="/images/star2.png" alt="" className="w-full h-full" />
           </div>
         </div>

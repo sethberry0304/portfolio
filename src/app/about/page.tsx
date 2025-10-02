@@ -7,7 +7,7 @@ export default function AboutPage() {
   return (
     <Section>
       <Container>
-        {/* Star Decorations */}
+        {/* Star Decorations - desktop */}
         <div className="hidden lg:block pointer-events-none z-0">
           <div className="absolute top-24 right-16 w-[320px] h-[320px]">
             <Image src="/images/star1.png" alt="" width={320} height={320} className="w-full h-full" />
@@ -17,6 +17,15 @@ export default function AboutPage() {
           </div>
           <div className="absolute bottom-24 right-1/4 w-[384px] h-[384px]">
             <Image src="/images/star3.png" alt="" width={384} height={384} className="w-full h-full" />
+          </div>
+        </div>
+        {/* Star Decorations - mobile */}
+        <div className="lg:hidden pointer-events-none z-0">
+          <div className="absolute top-16 right-4 w-24 h-24">
+            <Image src="/images/star1.png" alt="" width={96} height={96} className="w-full h-full" />
+          </div>
+          <div className="absolute bottom-20 left-6 w-28 h-28">
+            <Image src="/images/star3.png" alt="" width={112} height={112} className="w-full h-full" />
           </div>
         </div>
         <div className="relative z-10 max-w-4xl mx-auto">
@@ -29,7 +38,7 @@ export default function AboutPage() {
             <div className="relative">
               <div className="rounded-2xl overflow-hidden border-2 border-brand_red/30">
                 <Image
-                  src="/images/profile.jpg"
+                  src="/images/profile_v2.jpg"
                   alt={basic.name_en}
                   width={600}
                   height={800}

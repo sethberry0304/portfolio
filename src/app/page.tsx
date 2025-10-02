@@ -13,7 +13,7 @@ export default function HomePage() {
     <>
       {/* Hero Section */}
       <Section className="min-h-screen flex items-center justify-center relative overflow-hidden">
-        {/* Star Decorations */}
+        {/* Star Decorations - desktop */}
         <div className="absolute top-20 left-10 w-[320px] h-[320px] hidden lg:block">
           <Image src="/images/star1.png" alt="" width={320} height={320} className="w-full h-full" />
         </div>
@@ -22,6 +22,18 @@ export default function HomePage() {
         </div>
         <div className="absolute top-1/4 right-48 w-[384px] h-[384px] hidden lg:block">
           <Image src="/images/star3.png" alt="" width={384} height={384} className="w-full h-full" />
+        </div>
+        {/* Star Decorations - mobile */}
+        <div className="absolute inset-0 lg:hidden pointer-events-none">
+          <div className="absolute top-16 left-3 w-24 h-24 opacity-90">
+            <Image src="/images/star1.png" alt="" width={96} height={96} className="w-full h-full" />
+          </div>
+          <div className="absolute bottom-24 right-2 w-40 h-40 opacity-90">
+            <Image src="/images/star2.png" alt="" width={160} height={160} className="w-full h-full" />
+          </div>
+          <div className="absolute top-1/3 right-6 w-28 h-28 opacity-90">
+            <Image src="/images/star3.png" alt="" width={112} height={112} className="w-full h-full" />
+          </div>
         </div>
         
         <Container className="relative z-10">
