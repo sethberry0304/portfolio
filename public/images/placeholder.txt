@@ -1,0 +1,13 @@
+This directory contains placeholder images for the portfolio.
+
+The portfolio uses Unsplash images by default:
+- Research: https://images.unsplash.com/photo-1551288049-bebda4e38f71
+- Photography: https://images.unsplash.com/photo-1506905925346-21bda4d32df4
+- Product: https://images.unsplash.com/photo-1518709268805-4e9042af2176
+
+You can replace these with your own images by:
+1. Adding images to this directory
+2. Updating the cover URLs in data/works.ts
+3. Or using the Bilibili import script for automatic video covers
+
+For profile images, update the About page component.
