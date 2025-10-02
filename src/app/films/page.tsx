@@ -1,7 +1,7 @@
 import Container from '../../components/Container';
 import Section from '../../components/Section';
 import WorkCard from '../../components/WorkCard';
-import { works } from '../../../data/works';
+import { works } from '@/data/works';
 
 export default function VideosPage() {
   const videos = works.filter(work => work.tag === "video");

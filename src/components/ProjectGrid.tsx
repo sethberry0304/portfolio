@@ -1,4 +1,4 @@
-import { Work } from '../../data/works';
+import type { Work } from '@/data/works';
 import WorkCard from './WorkCard';
 
 interface ProjectGridProps {

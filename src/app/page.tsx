@@ -3,7 +3,7 @@ import Container from '../components/Container';
 import Section from '../components/Section';
 import WorkCard from '../components/WorkCard';
 import { basic, pages } from '../../data/content';
-import { works } from '../../data/works';
+import { works } from '@/data/works';
 
 export default function HomePage() {
   // Get featured works (first 6)
