@@ -2,6 +2,7 @@ import { notFound } from 'next/navigation'
 import Image from 'next/image'
 import Link from 'next/link'
 import { works } from '@/data/works'
+import type { MediaItem } from '@/data/works'
 import VideoEmbed from '@/components/VideoEmbed'
 import Container from '@/components/Container'
 
@@ -86,17 +87,21 @@ export default function ProjectDetailPage({ params }: ProjectDetailPageProps) {
                   <div className="mb-12">
                     <h3 className="text-2xl font-bold text-white mb-6">Gallery</h3>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                      {project.extra.gallery.map((image, index) => (
-                        <div key={index} className="relative aspect-video overflow-hidden rounded-lg">
-                          <Image
-                            src={image}
-                            alt={`${project.title} - Image ${index + 1}`}
-                            fill
-                            className="object-cover hover:scale-105 transition-transform duration-300"
-                            sizes="(max-width: 768px) 100vw, 50vw"
-                          />
-                        </div>
-                      ))}
+                      {project.extra.gallery.map((img: MediaItem | string, index) => {
+                        const src = typeof img === 'string' ? img : img.src;
+                        const alt = typeof img === 'string' ? `${project.title} - Image ${index + 1}` : (img.alt ?? `${project.title} - Image ${index + 1}`);
+                        return (
+                          <div key={index} className="relative aspect-video overflow-hidden rounded-lg">
+                            <Image
+                              src={src}
+                              alt={alt}
+                              fill
+                              className="object-cover hover:scale-105 transition-transform duration-300"
+                              sizes="(max-width: 768px) 100vw, 50vw"
+                            />
+                          </div>
+                        );
+                      })}
                     </div>
                   </div>
                 )}

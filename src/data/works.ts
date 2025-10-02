@@ -10,9 +10,10 @@ export type MediaItem = {
 export type WorkExtra = {
   publishedAt?: string;
   gallery?: MediaItem[];
-  credits?: string;
+  credits?: string[]; // normalized to array
   duration?: string;
   links?: { label: string; href: string }[];
+  press?: { title: string; url: string }[];
 };
 
 export type Work = {
@@ -28,6 +29,7 @@ export type Work = {
   role?: string;
   client?: string;
   tools?: string[];
+  tags?: string[];
 
   extra?: WorkExtra;
 };
