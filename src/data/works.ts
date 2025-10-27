@@ -36,6 +36,15 @@ export type Work = {
 
 export const works: Work[] = [
   {
+    id: "BV1nks8zYEEo",
+    title: "SO I START A REVOLUTION FROM MY BED(room)",
+    tag: "video",
+    cover: "https://i0.hdslb.com/bfs/archive/BV1nks8zYEEo.jpg",
+    href: "https://www.bilibili.com/video/BV1nks8zYEEo",
+    year: 2025,
+    extra: { publishedAt: "" }
+  },
+  {
     id: "BV1MEKJzeENE",
     title: "相差13岁，写给二胎妹妹的一封信",
     titleEn: "Thirteen Years Apart: A Letter to My Younger Sister",
