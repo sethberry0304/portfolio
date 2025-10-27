@@ -43,7 +43,13 @@ export const works: Work[] = [
     cover: "https://i0.hdslb.com/bfs/archive/237dbf23c25a07e6792efc41eca199652486cfbf.jpg@672w_378h_1c.webp",
     href: "https://www.bilibili.com/video/BV1nks8zYEEo",
     year: 2025,
-    extra: { publishedAt: "" }
+    extra: { 
+      publishedAt: "",
+      links: [
+        { label: "Bilibili", href: "https://www.bilibili.com/video/BV1nks8zYEEo" },
+        { label: "YouTube", href: "https://www.youtube.com/watch?v=bsT6TKiuWTI" }
+      ]
+    }
   },
   {
     id: "BV1MEKJzeENE",

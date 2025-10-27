@@ -10,21 +10,17 @@ type AnyWork = {
   blurb?: string;
   cover?: string;
   href: string;
-  extra?: { publishedAt?: string };
+  extra?: { publishedAt?: string; links?: { label: string; href: string }[] };
 };
 
 export default function WorkCard({ work }: { work: AnyWork }) {
   const titleCN = work.title || "";
   const titleEN = work.titleEn || "";
+  const links = work.extra?.links ?? [];
 
   return (
-    <Link
-      href={work.href}
-      target="_blank"
-      rel="noopener noreferrer"
-       className="group block rounded-2xl overflow-hidden border-2 border-white/20 bg-white/5 hover:border-brand_red hover:shadow-contrast-red transition-all duration-300"
-    >
-      <div className="relative aspect-video">
+    <div className="group block rounded-2xl overflow-hidden border-2 border-white/20 bg-white/5 hover:border-brand_red hover:shadow-contrast-red transition-all duration-300">
+      <Link href={work.href} target="_blank" rel="noopener noreferrer" className="relative aspect-video block">
         {work.cover ? (
           <Image src={work.cover} alt={titleCN} fill className="object-cover" />
         ) : (
@@ -40,7 +36,7 @@ export default function WorkCard({ work }: { work: AnyWork }) {
             {work.tag}
           </span>
         )}
-      </div>
+      </Link>
 
       <div className="p-4">
         {work.extra?.publishedAt && (
@@ -50,9 +46,11 @@ export default function WorkCard({ work }: { work: AnyWork }) {
         )}
 
         {/* 中文主标题 */}
-        <h3 className="font-semibold leading-snug text-[15.5px] sm:text-[16px] line-clamp-2">
-          {titleCN}
-        </h3>
+        <Link href={work.href} target="_blank" rel="noopener noreferrer">
+          <h3 className="font-semibold leading-snug text-[15.5px] sm:text-[16px] line-clamp-2">
+            {titleCN}
+          </h3>
+        </Link>
 
         {/* 英文副标题 */}
         {titleEN && (
@@ -66,7 +64,30 @@ export default function WorkCard({ work }: { work: AnyWork }) {
             {work.blurb}
           </p>
         )}
+
+        {links.length > 0 && (
+          <div className="mt-3 flex flex-wrap gap-2">
+            {links.map((l) => {
+              const isYouTube = /youtube\.com|youtu\.be/.test(l.href);
+              const isBilibili = /bilibili\.com/.test(l.href);
+              const color = isYouTube ? 'bg-red-600/90 border-red-600 text-white hover:bg-red-600' :
+                             isBilibili ? 'bg-blue-500/90 border-blue-500 text-white hover:bg-blue-500' :
+                             'bg-white/10 border-white/30 text-white hover:bg-white/20';
+              return (
+                <a
+                  key={l.href}
+                  href={l.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={`inline-flex items-center rounded-md px-2.5 py-1 text-xs font-semibold border transition-colors ${color}`}
+                >
+                  {l.label}
+                </a>
+              );
+            })}
+          </div>
+        )}
       </div>
-    </Link>
+    </div>
   );
 }
