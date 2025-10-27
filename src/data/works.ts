@@ -60,7 +60,13 @@ export const works: Work[] = [
     href: "https://www.bilibili.com/video/BV1MEKJzeENE",
     year: 2024,
     role: "Director",
-    extra: { publishedAt: "" }
+    extra: { 
+      publishedAt: "",
+      links: [
+        { label: "YouTube", href: "https://www.youtube.com/watch?v=RZ-0J_KCRd8&t=3s" },
+        { label: "Bilibili", href: "https://www.bilibili.com/video/BV1MEKJzeENE" }
+      ]
+    }
   },
   {
     id: "BV1YFjozqEg2",
@@ -102,7 +108,13 @@ export const works: Work[] = [
     cover: "https://i0.hdslb.com/bfs/archive/e48877ae5e7073c621ed454f33fd024e730b7600.jpg@672w_378h_1c.webp",
     href: "https://www.bilibili.com/video/BV1aJA6eAEfK",
     year: 2022,
-    extra: { publishedAt: "" }
+    extra: { 
+      publishedAt: "",
+      links: [
+        { label: "YouTube", href: "https://www.youtube.com/watch?v=q96cXcktbpU" },
+        { label: "Bilibili", href: "https://www.bilibili.com/video/BV1aJA6eAEfK" }
+      ]
+    }
   },
   {
     id: "BV1vnk2YPEjp",

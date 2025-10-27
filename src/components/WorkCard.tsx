@@ -17,6 +17,15 @@ export default function WorkCard({ work }: { work: AnyWork }) {
   const titleCN = work.title || "";
   const titleEN = work.titleEn || "";
   const links = work.extra?.links ?? [];
+  const sortedLinks = [...links].sort((a, b) => {
+    const ya = /youtube\.com|youtu\.be/.test(a.href) ? 0 : 1;
+    const yb = /youtube\.com|youtu\.be/.test(b.href) ? 0 : 1;
+    if (ya !== yb) return ya - yb; // YouTube first
+    const ba = /bilibili\.com/.test(a.href) ? 0 : 1;
+    const bb = /bilibili\.com/.test(b.href) ? 0 : 1;
+    if (ba !== bb) return ba - bb; // then Bilibili
+    return 0;
+  });
 
   return (
     <div className="group block rounded-2xl overflow-hidden border-2 border-white/20 bg-white/5 hover:border-brand_red hover:shadow-contrast-red transition-all duration-300">
@@ -65,9 +74,9 @@ export default function WorkCard({ work }: { work: AnyWork }) {
           </p>
         )}
 
-        {links.length > 0 && (
+        {sortedLinks.length > 0 && (
           <div className="mt-3 flex flex-wrap gap-2">
-            {links.map((l) => {
+            {sortedLinks.map((l) => {
               const isYouTube = /youtube\.com|youtu\.be/.test(l.href);
               const isBilibili = /bilibili\.com/.test(l.href);
               const color = isYouTube ? 'bg-red-600/90 border-red-600 text-white hover:bg-red-600' :
