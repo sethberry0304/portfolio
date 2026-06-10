@@ -38,7 +38,7 @@ export const works: Work[] = [
   {
     id: "BV1nks8zYEEo",
     title: "什么时候开始，算法让我们不再为自己创作？",
-    titleEn: "SO I START A REVOLUTION FROM MY BED(room)",
+    titleEn: "When Did Algorithms Stop Us from Creating for Ourselves?",
     tag: "video",
     cover: "https://i0.hdslb.com/bfs/archive/237dbf23c25a07e6792efc41eca199652486cfbf.jpg@672w_378h_1c.webp",
     href: "https://www.bilibili.com/video/BV1nks8zYEEo",
@@ -46,8 +46,8 @@ export const works: Work[] = [
     extra: { 
       publishedAt: "",
       links: [
-        { label: "Bilibili", href: "https://www.bilibili.com/video/BV1nks8zYEEo" },
-        { label: "YouTube", href: "https://www.youtube.com/watch?v=bsT6TKiuWTI" }
+        { label: "YouTube", href: "https://www.youtube.com/watch?v=bsT6TKiuWTI" },
+        { label: "Bilibili", href: "https://www.bilibili.com/video/BV1nks8zYEEo" }
       ]
     }
   },
