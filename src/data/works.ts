@@ -36,6 +36,58 @@ export type Work = {
 
 export const works: Work[] = [
   {
+    id: "BV1GaDWBjEqF",
+    title: "如果你一觉醒来，回到了2010年...",
+    titleEn: "If You Woke Up Back in 2010...",
+    tag: "video",
+    cover: "https://i0.hdslb.com/bfs/archive/ca3fcb360e609f8dfc5d37f5d8847bb6efe1a115.jpg@672w_378h_1c.webp",
+    href: "https://www.bilibili.com/video/BV1GaDWBjEqF",
+    year: 2026,
+    extra: { publishedAt: "2026-04-09T00:00:00Z" }
+  },
+  {
+    id: "BV1oLSoBGEWf",
+    title: "毕业找工作第33天，我放弃了...",
+    titleEn: "On Day 33 of Job Hunting After Graduation, I Gave Up...",
+    tag: "video",
+    cover: "https://i0.hdslb.com/bfs/archive/9b3d4d1650fcc54eab573f4b32189f767fd42b5a.jpg@672w_378h_1c.webp",
+    href: "https://www.bilibili.com/video/BV1oLSoBGEWf",
+    year: 2026,
+    extra: { publishedAt: "2026-04-06T00:00:00Z" }
+  },
+  {
+    id: "BV1HVfuBrEX9",
+    title: "独自在美国过年，年轻人真的越来越不爱回家？",
+    titleEn: "Spending Lunar New Year Alone in America: Are Young People Really Going Home Less?",
+    tag: "video",
+    cover: "https://i0.hdslb.com/bfs/archive/08fc4650f9047d5609ccfa05f813a4e4cee3fcec.jpg@672w_378h_1c.webp",
+    href: "https://www.bilibili.com/video/BV1HVfuBrEX9",
+    year: 2026,
+    extra: {
+      publishedAt: "2026-02-21T00:00:00Z",
+      links: [
+        { label: "YouTube", href: "https://www.youtube.com/watch?v=wVH8mScLJac" },
+        { label: "Bilibili", href: "https://www.bilibili.com/video/BV1HVfuBrEX9" }
+      ]
+    }
+  },
+  {
+    id: "BV1BWrpB8E4d",
+    title: "这个视频是AI时代人类最后的抵抗…",
+    titleEn: "This Video Is Humanity's Last Resistance in the Age of AI...",
+    tag: "video",
+    cover: "https://i0.hdslb.com/bfs/archive/fb7722dc6523005e268896c34e235f31960ccd55.jpg@672w_378h_1c.webp",
+    href: "https://www.bilibili.com/video/BV1BWrpB8E4d",
+    year: 2026,
+    extra: {
+      publishedAt: "2026-01-14T00:00:00Z",
+      links: [
+        { label: "YouTube", href: "https://www.youtube.com/watch?v=TSA8RTFdJgY" },
+        { label: "Bilibili", href: "https://www.bilibili.com/video/BV1BWrpB8E4d" }
+      ]
+    }
+  },
+  {
     id: "BV1nks8zYEEo",
     title: "什么时候开始，算法让我们不再为自己创作？",
     titleEn: "When Did Algorithms Stop Us from Creating for Ourselves?",
@@ -50,6 +102,16 @@ export const works: Work[] = [
         { label: "Bilibili", href: "https://www.bilibili.com/video/BV1nks8zYEEo" }
       ]
     }
+  },
+  {
+    id: "BV1RFsczBET7",
+    title: "四个月没更新了，我来发个预告片（新视频10.22发布）",
+    titleEn: "After Four Months Away, Here Is a Trailer (New Video Out 10.22)",
+    tag: "video",
+    cover: "https://i0.hdslb.com/bfs/archive/e86665242b773464bda8a17ca96c0edd24639c1b.jpg@672w_378h_1c.webp",
+    href: "https://www.bilibili.com/video/BV1RFsczBET7",
+    year: 2025,
+    extra: { publishedAt: "2025-10-19T00:00:00Z" }
   },
   {
     id: "BV1MEKJzeENE",
