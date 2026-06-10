@@ -16,7 +16,14 @@ type AnyWork = {
 export default function WorkCard({ work }: { work: AnyWork }) {
   const titleCN = work.title || "";
   const titleEN = work.titleEn || "";
-  const links = work.extra?.links ?? [];
+  const fallbackLabel = /youtube\.com|youtu\.be/.test(work.href)
+    ? "YouTube"
+    : /bilibili\.com/.test(work.href)
+      ? "Bilibili"
+      : "View";
+  const links = work.extra?.links?.length
+    ? work.extra.links
+    : [{ label: fallbackLabel, href: work.href }];
   const sortedLinks = [...links].sort((a, b) => {
     const ya = /youtube\.com|youtu\.be/.test(a.href) ? 0 : 1;
     const yb = /youtube\.com|youtu\.be/.test(b.href) ? 0 : 1;
